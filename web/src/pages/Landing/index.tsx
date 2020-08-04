@@ -1,5 +1,9 @@
 import React from 'react';
 
+// Importando do react-router-dom um componente chamado Link
+// Evita que a aplicação seja carregada do zero quando o usuário navega entre as páginas
+import { Link } from 'react-router-dom';
+
 // Importar o estilo
 import './styles.css';
 
@@ -28,14 +32,15 @@ function Landing() {
             />
 
             <div className="buttons-container">
-              <a href="#" className="study">
+              <Link to="/study" className="study">
                 <img src={studyIcon} alt="Estudar" />
                 Estudar
-              </a>
-              <a href="#" className="give-classes">
+              </Link>
+
+              <Link to="/give-classes" className="give-classes">
                 <img src={giveClassesIcon} alt="Dar Aulas" />
                 Dar Aulas
-              </a>
+              </Link>
             </div>
 
             <span className="total-connections">
@@ -44,7 +49,7 @@ function Landing() {
             </span>
           </div>
         </div>
-      );
+    );
 }
 
 export default Landing;
