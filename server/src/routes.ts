@@ -11,76 +11,15 @@ Route params: identificar qual recurso atualizar ou deletar
 Query params: paginação, filtro, ordenação
 */
 import express from 'express';
-
-import db from './database/connection';
-import convertHourToMinutes from './utils/convertHourToMinutes';
+import ClassesController from './controllers/ClassesController';
 
 const routes = express.Router();
-
-// Definindo os formatos de cada item do cronograma
-interface ScheduleItem {
-    week_day: number;
-    from: string;
-    to: string;
-}
+const classesControllers = new ClassesController();
 
 // Primeira rota: criação de uma aula
-routes.post('/classes', async (request, response) => {
-    // Usuário
-    const {
-        name,
-        avatar,
-        whatsapp,
-        bio,
-        subject,
-        cost,
-        schedule
-    } = request.body;
+routes.post('/classes', classesControllers.create);
 
-    const trx = await db.transaction();
-
-    try {
-        const insertedUsersIds = await trx('users').insert({
-            name,
-            avatar,
-            whatsapp,
-            bio,
-        });
-        const user_id = insertedUsersIds[0];
-    
-        // Aula
-        const insertedClassesIds = await trx('classes').insert({
-            subject,
-            cost,
-            user_id,
-        })
-        const class_id = insertedClassesIds[0];
-    
-        // Agendamento da aula
-        // Convertendo os horário das aulas em minutos
-        const classSchedule = schedule.map((scheduleItem: ScheduleItem) => {
-            return {
-                class_id,
-                week_day: scheduleItem.week_day,
-                from: convertHourToMinutes(scheduleItem.from),
-                to: convertHourToMinutes(scheduleItem.to),
-            }
-        })
-    
-        await trx('class_schedule').insert(classSchedule);
-    
-        // Insere todas as informações ao mesmo tempo no bd
-        await trx.commit();
-    
-        return response.status(201).send();
-    } catch (err) {
-        // Em caso de erro, desfazer as alterações do bd
-        await trx.rollback();
-
-        return response.status(400).json({
-            error: 'Unexpected error while creating new class'
-        })
-    }
-});
+// Segunda rota: listar as aulas e filtrar por matéria
+routes.get('/classes', classesControllers.index);
 
 export default routes;
