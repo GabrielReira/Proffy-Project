@@ -23,7 +23,7 @@
 
 ---
 
-## 💻 Sobre o projeto
+## :computer: Sobre o projeto
 ### Informações gerais
 <p>Proffy é uma aplicação web e mobile que facilita a conexão entre alunos e professores.</p>
 <p>Esta aplicação funciona de uma maneira bem simples: aos professores cabe a função de cadastrar suas aulas, adicionando informações como a disciplina, valor da hora/aula e seus horários disponívies; aos alunos basta pesquisar por uma matéria que está precisando de ajuda e pronto, em sua tela aparecerá os professores disponíveis e ele poderá entrar em contato com qualquer um de sua escolha.</p>
@@ -41,3 +41,27 @@
 </p>
   
 ---
+
+## :rocket: Tecnologias utilizadas
+### Front-end
+* TypeScript
+* ReactJS
+* React Native
+* HTML e CSS
+
+### Back-end
+* NodeJS
+* Express
+* Expo
+* Knex
+* SQLite
+* Axios
+
+---
+
+## 🧾 Licença
+Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.
+
+---
+
+<p align="center"><strong>Por <a href="https://www.linkedin.com/in/gabriel-reira-5a8a871a9/">Gabriel Reira</a></strong></p>
