@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { View, Image, Text, Linking, AsyncStorage } from 'react-native';
 import { RectButton } from 'react-native-gesture-handler';
-import { AsyncStorageStatic } from '@react-native-community/async-storage';
 
 import api from '../../services/api';
 

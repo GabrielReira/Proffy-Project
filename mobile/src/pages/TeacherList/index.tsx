@@ -59,7 +59,7 @@ function TeacherList() {
             title="Proffys disponíveis"
             headerRight={(
                 <BorderlessButton onPress={handleToggleFiltersVisible}>
-                    <Feather name="filter" size={20} color='#fff' />
+                    <Feather name="search" size={20} color='#fff' />
                 </BorderlessButton>
             )}
         >
@@ -99,7 +99,7 @@ function TeacherList() {
                     </View>
 
                     <RectButton onPress={handleFilterSubmit} style={styles.submitButton}>
-                        <Text style={styles.submitButtonText}>Filtrar</Text>
+                        <Text style={styles.submitButtonText}>Pesquisar</Text>
                     </RectButton>
                 </View>
             )}

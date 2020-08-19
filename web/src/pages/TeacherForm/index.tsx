@@ -116,11 +116,15 @@ function TeacherForm() {
                                 { value: 'Biologia', label: 'Biologia' },
                                 { value: 'Ciências', label: 'Ciências' },
                                 { value: 'Educação física', label: 'Educação física' },
+                                { value: 'Espanhol', label: 'Espanhol' },
+                                { value: 'Filosofia', label: 'Filosofia' },
                                 { value: 'Física', label: 'Física' },
                                 { value: 'Geografia', label: 'Geografia' },
                                 { value: 'História', label: 'História' },
+                                { value: 'Inglês', label: 'Inglês' },
+                                { value: 'Língua portuguesa', label: 'Língua portuguesa' },
+                                { value: 'Literatura', label: 'Literatura' },
                                 { value: 'Matemática', label: 'Matemática' },
-                                { value: 'Português', label: 'Português' },
                                 { value: 'Química', label: 'Química' },
                             ]}
                         />
