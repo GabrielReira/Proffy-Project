@@ -59,7 +59,28 @@
 
 ---
 
-## 🧾 Licença
+## :framed_picture: Screenshots
+### Web
+<h1 align="center">
+    <img src="images_readme/landing.png">
+</h1>
+<h1>
+    <img src="images_readme/teacher-form.png"  width="49%" height"100%">
+    <img src="images_readme/teacher-list.png"  width="49%" height"100%">
+</h1>
+
+### Mobile
+<h1>
+    <img src="images_readme/mobile-landing.PNG"  width="19%" height"100%">
+    <img src="images_readme/mobile-give-classes.PNG"  width="19%" height"100%">
+    <img src="images_readme/mobile-search.PNG"  width="19%" height"100%">
+    <img src="images_readme/mobile-search2.PNG"  width="19%" height"100%">
+    <img src="images_readme/mobile-favorites.PNG"  width="19%" height"100%">
+</h1>
+
+---
+
+## :scroll: Licença
 Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.
 
 ---
