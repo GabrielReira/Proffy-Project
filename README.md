@@ -80,8 +80,56 @@
 
 ---
 
+## :boom: Como baixar e executar o projeto
+### Pré-requisitos
+   * Possuir o **[Node.js](https://nodejs.org/en/)** instalado no computador;
+   * Possuir o **[Git](https://git-scm.com/)** instalado e configurado no computador;
+   * Possuir um gerenciador de pacotes, seja o **[Yarn](https://yarnpkg.com/)** ou **[npm](https://www.npmjs.com/)**;
+   * Por fim, é essencial ter o **[Expo](https://expo.io/)** instalado de forma global na máquina.
+
+### Clone o repositório
+```sh
+    # Clonar o repositório
+    $ git clone https://github.com/GabrielReira/Proffy-Project.git
+    # Entrar no diretório
+    $ cd proffy-project
+```
+### Executar a API :brain:
+```sh
+    # Acessar o diretório da API
+    $ cd server
+    # Instalar as dependências do projeto
+    $ yarn install
+    # Configurar o banco de dados
+    $ yarn knex:migrate
+    # Iniciar o Server
+    $ yarn start
+```
+### Executar o Projeto Web :computer:
+```sh
+    # Acessar o diretório da web
+    $ cd web
+    # Instalar as dependências do projeto
+    $ yarn install
+    # Iniciar a aplicação Web
+    $ yarn start
+```
+### Executar o Projeto Mobile :iphone:
+```sh
+    # Acessar o diretório do mobile
+    $ cd mobile
+    # Instalar as fontes usadas
+    $ expo install expo-font @expo-google-fonts/archivo @expo-google-fonts/poppins
+    # Instalar as dependências do projeto
+    $ yarn install
+    # Iniciar a aplicação Mobile
+    $ yarn start
+```
+
+---
+
 ## :scroll: Licença
-Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.
+Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](https://github.com/GabrielReira/Proffy-Project/blob/master/LICENSE) para mais detalhes.
 
 ---
 
